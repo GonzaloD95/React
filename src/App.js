@@ -1,24 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
+import MyComponent from './mycomps/mycomps';
+import NavBar from './mycomps/NavBar';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ListContainer from './mycomps/ItemListContainer';
+
 
 function App() {
   return (
+    <>
+    
     <div className="App">
+      <NavBar/>
+      <ListContainer greeting={'Bievenidos a la tienda'} />
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={logo} className="App-logo" alt="logo" />  
+
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+         Tiendita de Skins 
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        
+        <MyComponent name='Awp'/>
+        <MyComponent name='Ak 47'/> 
+
       </header>
     </div>
+    </>
   );
 }
 
